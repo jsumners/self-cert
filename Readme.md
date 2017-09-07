@@ -1,7 +1,7 @@
 # self-cert
 
 This is a simple library for generating a self-signed x509 keypair and certificate.
-I looked at [selfsign](https://npm.im/selfsign) before writing this
+I looked at [selfsigned](https://npm.im/selfsigned) before writing this
 library, but it didn't seem to be well maintained and had a hard dependency
 on an outdated version of [node-forge](https://npm.im/node-forge). This library
 also depends on `node-forge`, but it does so with semver qualifiers such that
@@ -57,6 +57,7 @@ Notes:
 + `stateName` maps to `stateOrProvinceName`.
 + `logger` should be a Log4j compliant logger; [Pino](http://getpino.io/) is
 recommended. This library logs some progress messages at the `debug` level.
+The default is a null logger.
 
 ## License
 
