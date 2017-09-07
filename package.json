@@ -1,0 +1,37 @@
+{
+  "name": "self-cert",
+  "version": "1.0.0",
+  "description": "A simple library to generate self signed x509 certs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard | snazzy"
+  },
+  "precommit": [
+    "lint"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jsumners/self-cert.git"
+  },
+  "keywords": [
+    "x509",
+    "certificates",
+    "self-signed"
+  ],
+  "author": "James Sumners <james.sumners@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsumners/self-cert/issues"
+  },
+  "homepage": "https://github.com/jsumners/self-cert#readme",
+  "devDependencies": {
+    "pre-commit": "^1.2.2",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.3"
+  },
+  "dependencies": {
+    "abstract-logging": "^1.0.0",
+    "node-forge": "^0.7.x"
+  }
+}
