@@ -1,6 +1,6 @@
 {
   "name": "self-cert",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A simple library to generate self signed x509 certs",
   "main": "index.js",
   "bin": {
