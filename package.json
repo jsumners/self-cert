@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "A simple library to generate self signed x509 certs",
   "main": "index.js",
+  "bin": {
+    "self-cert": "./bin.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard | snazzy"
@@ -32,6 +35,9 @@
   },
   "dependencies": {
     "abstract-logging": "^1.0.0",
-    "node-forge": "^0.7.x"
+    "edtf": "^2.3.0",
+    "node-forge": "^0.7.x",
+    "pino": "^4.10.3",
+    "sade": "^1.3.1"
   }
 }

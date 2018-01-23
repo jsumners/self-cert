@@ -59,6 +59,15 @@ Notes:
 recommended. This library logs some progress messages at the `debug` level.
 The default is a null logger.
 
+## CLI
+
+This module may also be installed globally as a CLI tool:
+
+```sh
+$ npm install -g self-cert
+$ self-cert generate --help
+```
+
 ## License
 
 [MIT License](http://jsumners.mit-license.org/)
