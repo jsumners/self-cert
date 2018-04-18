@@ -9,7 +9,7 @@ module.exports = function (opts) {
   const now = new Date()
 
   if (!options.attrs) options.attrs = {}
-  if (!options.exipres) {
+  if (!options.expires) {
     options.expires = new Date(
       now.getFullYear() + 5, now.getMonth() + 1, now.getDate()
     )
