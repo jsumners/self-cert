@@ -33,7 +33,7 @@ prog.parse(process.argv)
 
 function generate (name, dest, opts) {
   const logger = (opts.debug)
-    ? require('pino')({level: 'trace', prettyPrint: true})
+    ? require('pino')({ level: 'trace', prettyPrint: true })
     : Object.create(require('abstract-logging'))
   if (!logger.child) {
     logger.child = () => logger
@@ -78,9 +78,9 @@ function generate (name, dest, opts) {
   const pubKeyFile = path.join(_dest, `${name}.pub`)
 
   const files = [
-    {file: certFile, data: cert.certificate},
-    {file: privKeyFile, data: cert.privateKey},
-    {file: pubKeyFile, data: cert.publicKey}
+    { file: certFile, data: cert.certificate },
+    { file: privKeyFile, data: cert.privateKey },
+    { file: pubKeyFile, data: cert.publicKey }
   ]
 
   files.forEach((obj) => {

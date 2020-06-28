@@ -27,18 +27,18 @@ module.exports = function (opts) {
   cert.validity.notAfter = options.expires
 
   const attrs = [
-    {name: 'commonName', value: options.attrs.commonName || os.hostname()},
-    {name: 'countryName', value: options.attrs.countryName || 'US'},
-    {name: 'stateOrProvinceName', value: options.attrs.stateName || 'Georgia'},
-    {name: 'localityName', value: options.attrs.locality || 'Atlanta'},
-    {name: 'organizationName', value: options.attrs.orgName || 'None'},
-    {shortName: 'OU', value: options.attrs.shortName || 'example'}
+    { name: 'commonName', value: options.attrs.commonName || os.hostname() },
+    { name: 'countryName', value: options.attrs.countryName || 'US' },
+    { name: 'stateOrProvinceName', value: options.attrs.stateName || 'Georgia' },
+    { name: 'localityName', value: options.attrs.locality || 'Atlanta' },
+    { name: 'organizationName', value: options.attrs.orgName || 'None' },
+    { shortName: 'OU', value: options.attrs.shortName || 'example' }
   ]
   cert.setSubject(attrs)
   cert.setIssuer(attrs)
 
   cert.setExtensions([
-    {name: 'basicConstraints', cA: true},
+    { name: 'basicConstraints', cA: true },
     {
       name: 'keyUsage',
       keyCertSign: true,
@@ -65,15 +65,15 @@ module.exports = function (opts) {
       emailCA: true,
       objCA: true
     },
-    {name: 'subjectKeyIdentifier'},
+    { name: 'subjectKeyIdentifier' },
     {
       name: 'subjectAltName',
-      altNames: [{type: 6 /* URI */, value: 'DNS: ' + attrs[0].value}].concat((function () {
+      altNames: [{ type: 6 /* URI */, value: 'DNS: ' + attrs[0].value }].concat((function () {
         const ips = []
         const interfaces = os.networkInterfaces()
         Object.keys(interfaces).forEach((k) => {
           interfaces[k].forEach((i) => {
-            ips.push({type: 7 /* IP */, ip: i.address})
+            ips.push({ type: 7 /* IP */, ip: i.address })
           })
         })
         return ips
