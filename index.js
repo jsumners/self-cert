@@ -1,6 +1,6 @@
 'use strict'
 
-const os = require('os')
+const os = require('node:os')
 const forge = require('node-forge')
 
 module.exports = function (opts) {
@@ -16,7 +16,7 @@ module.exports = function (opts) {
   }
 
   log.debug('generating key pair')
-  const keys = forge.pki.rsa.generateKeyPair(options.bits || 2048)
+  const keys = forge.pki.rsa.generateKeyPair(options.bits || 4096)
   log.debug('key pair generated')
 
   log.debug('generating self-signed certificate')

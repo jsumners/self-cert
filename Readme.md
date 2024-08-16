@@ -45,7 +45,7 @@ const certDetails = selfCert({
     orgName: '', // Default: 'None'
     shortName: '' // Default: 'example'
   },
-  bits: 2048, // Default: 2048
+  bits: 4096, // Default: 4096
   expires: new Date(), // Default: 5 years
   logger: {}
 }

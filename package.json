@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "standard | snazzy"
+    "lint": "eslint"
   },
   "precommit": [
     "lint"
@@ -29,15 +29,15 @@
   },
   "homepage": "https://github.com/jsumners/self-cert#readme",
   "devDependencies": {
-    "pre-commit": "^1.2.2",
-    "snazzy": "^9.0.0",
-    "standard": "^16.0.4"
+    "@fastify/pre-commit": "^2.1.0",
+    "eslint": "^9.9.0",
+    "neostandard": "^0.11.2"
   },
   "dependencies": {
     "abstract-logging": "^2.0.1",
     "edtf": "^4.1.0",
     "node-forge": "^1.2.1",
-    "pino": "^7.8.0",
+    "pino": "^9.3.2",
     "sade": "^1.8.1"
   }
 }

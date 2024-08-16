@@ -3,7 +3,7 @@
 
 const fs = require('fs')
 const path = require('path')
-const edtf = require('edtf')
+const { default: edtf } = require('edtf')
 const sade = require('sade')
 
 const pkg = require('./package.json')
