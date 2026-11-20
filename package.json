@@ -7,7 +7,7 @@
     "self-cert": "./bin.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test",
     "lint": "eslint"
   },
   "precommit": [
@@ -37,7 +37,7 @@
     "abstract-logging": "^2.0.1",
     "edtf": "^4.1.0",
     "node-forge": "^1.2.1",
-    "pino": "^9.3.2",
+    "pino": "^9.3.2 || ^10.0.0",
     "sade": "^1.8.1"
   }
 }

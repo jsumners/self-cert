@@ -33,7 +33,7 @@ prog.parse(process.argv)
 
 function generate (name, dest, opts) {
   const logger = (opts.debug)
-    ? require('pino')({ level: 'trace', prettyPrint: true })
+    ? require('pino')({ level: 'trace' })
     : Object.create(require('abstract-logging'))
   if (!logger.child) {
     logger.child = () => logger
@@ -70,8 +70,6 @@ function generate (name, dest, opts) {
       shortName: opts.u
     }
   })
-
-  logger.debug(cert, 'certificate')
 
   const certFile = path.join(_dest, `${name}.cert`)
   const privKeyFile = path.join(_dest, `${name}.key`)
